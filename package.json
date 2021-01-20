@@ -1,8 +1,8 @@
 {
-  "name": "mern-auth-backend",
+  "name": "nuer-art-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "GA Project 4 - Fullstack App, Backend Portion",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
@@ -13,9 +13,9 @@
   "author": "Jeremy Uriz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JJURIZ/mern-auth-backend/issues"
+    "url": "https://github.com/JJURIZ/nuer-art-backend/issues"
   },
-  "homepage": "https://github.com/JJURIZ/mern-auth-backend#readme",
+  "homepage": "https://github.com/JJURIZ/nuer-art-backend#readme",
   "dependencies": {
     "axios": "^0.21.0",
     "bcryptjs": "^2.4.3",
@@ -26,5 +26,10 @@
     "mongoose": "^5.11.8",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "supertest": "^6.0.1"
   }
 }

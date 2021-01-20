@@ -9,13 +9,36 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     password: {
         type: String,
         minLength: 8,
         required: true,
+    },
+    addressLine1: {
+        type: String,
+        required: false
+    },
+    addressLine2: {
+        type: String,
+        required: false
+    },
+    city: {
+        type: String,
+        required: false
+    },
+    state: {
+        type: String,
+        required: false
+    },
+    zip: {
+        type: Number,
+        required: false
+    },
+    art: {
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Art'
     },
     date: {
         type: Date,

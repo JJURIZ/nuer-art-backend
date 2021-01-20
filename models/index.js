@@ -23,6 +23,7 @@ db.on('error', (error) => {
 });
 
 module.exports.User = require('./User')
+module.exports.Artist = require('./Artist')
 /*
 Alternative syntax for the above::
 module.exports.User = require('./User');
