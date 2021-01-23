@@ -12,9 +12,9 @@ let dbUsers = {}
 let tokens = {}
 
 // DELETE DATA BEFORE PROCEEDING
-// before(async () => {
-//     await db.User.deleteMany({})
-// })
+before(async () => {
+    await db.User.deleteMany({})
+})
 
 // CREATE TEST USERS
 before(async () => {
@@ -70,8 +70,6 @@ before(async () => {
             state: users.tilly.state,
             zip: users.tilly.zip
         })
-    
-
 })
 
 // LOG IN USERS PRIOR TO TESTING
@@ -111,7 +109,6 @@ before(async () => {
             password: users.tilly.password
         })
     tokens.tilly = loggingTilly.body.token
-
 })
 
 // FIND USERS IN DATABSE

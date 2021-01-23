@@ -10,7 +10,7 @@ require('./configurations/passport')(passport)
 
 // INTERNAL CONTROLLERS
 const users = require('./controllers/users');
-const artists = require('./controllers/artists')
+const paintings = require('./controllers/paintings')
 
 // MIDDLEWARE
 app.use(cors());
@@ -20,7 +20,7 @@ app.use(passport.initialize())
 
 // USE INTERNAL CONTROLLERS
 app.use('/users', users);
-app.use('/artists', artists);
+app.use('/paintings', paintings);
 
 // HOME ROUTE
 app.get('/', (req, res) => {

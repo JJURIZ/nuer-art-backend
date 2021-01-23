@@ -36,9 +36,9 @@ const userSchema = new Schema({
         type: Number,
         required: false
     },
-    art: {
+    painting: {
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Art'
+        ref: 'Painting'
     },
     date: {
         type: Date,

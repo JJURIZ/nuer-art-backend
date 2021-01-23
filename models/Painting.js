@@ -4,7 +4,10 @@ const mongoose = require('mongoose')
 //CREATE VARIABLE FOR SCHEMA SHORTCUT
 const Schema = mongoose.Schema
 
-const artSchema = new Schema({
+const paintingSchema = new Schema({
+    url: {
+        type: String
+    },
     title: {
         type: String,
         default: 'Untitled',
@@ -15,14 +18,11 @@ const artSchema = new Schema({
         dafualt: 0,
         required: false
     },
-    quantity: {
+    qty: {
         type: Number,
         dafault: 1,
         required: false
     },
-    artist: {
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Artist'
-    }
-
 })
+
+module.exports = Painting = mongoose.model('Painting', paintingSchema)
