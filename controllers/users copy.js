@@ -85,7 +85,7 @@ router.post('/login', async (req, res) => {
                     name: currentUser.name
                 }
                 // SIGN TOKEN TO FINALIZE LOGIN
-                jwt.sign(payload, JWT_SECRET, {expiresIn: '1h'}, (error, token) => {
+                jwt.sign(payload, JWT_SECRET, {expiresIn: '1m'}, (error, token) => {
                     res.status(200).json({
                         success: true,
                         token: `Bearer ${token}`
@@ -114,23 +114,13 @@ router.get('/:id', passport.authenticate('jwt', {session: false}), async (req, r
 })
 
 // PUT ROUTE FOR USERS/:ID (PRIVATE)
-router.put('/:id',  async (req, res) => {
-    const {name, email, addressLine1, addressLine2, city, state, zip}  = req.body
+router.put('/:id', passport.authenticate('jwt', {session: false}), async (req, res) => {
+    const { newName } = req.body
     try {
         const updatedUser = await db.User.updateOne(
             {_id: req.params.id},
-            {$set: 
-            {
-                name,
-                email,
-                addressLine1,
-                addressLine2,
-                city,
-                state,
-                zip,
-            }}
+            {$set: {name: newName}}
         )
-        console.log(updatedUser)
         res.status(200).json({user: updatedUser})
     } catch(error) {
         res.status(400).json({msg: error})
