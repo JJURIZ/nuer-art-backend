@@ -113,6 +113,114 @@ before(async () => {
             price: paintings.fourth.price,
             qty: paintings.fourth.qty,
         })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.fifth.url,
+            title: paintings.fifth.title,
+            price: paintings.fifth.price,
+            qty: paintings.fifth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.sixth.url,
+            title: paintings.sixth.title,
+            price: paintings.sixth.price,
+            qty: paintings.sixth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.seventh.url,
+            title: paintings.seventh.title,
+            price: paintings.seventh.price,
+            qty: paintings.seventh.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.eighth.url,
+            title: paintings.eighth.title,
+            price: paintings.eighth.price,
+            qty: paintings.eighth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.ninth.url,
+            title: paintings.ninth.title,
+            price: paintings.ninth.price,
+            qty: paintings.ninth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.tenth.url,
+            title: paintings.tenth.title,
+            price: paintings.tenth.price,
+            qty: paintings.tenth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.eleventh.url,
+            title: paintings.eleventh.title,
+            price: paintings.eleventh.price,
+            qty: paintings.eleventh.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.twelfth.url,
+            title: paintings.twelfth.title,
+            price: paintings.twelfth.price,
+            qty: paintings.twelfth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.thirteenth.url,
+            title: paintings.thirteenth.title,
+            price: paintings.thirteenth.price,
+            qty: paintings.thirteenth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.fourteenth.url,
+            title: paintings.fourteenth.title,
+            price: paintings.fourteenth.price,
+            qty: paintings.fourteenth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.fifteenth.url,
+            title: paintings.fifteenth.title,
+            price: paintings.fifteenth.price,
+            qty: paintings.fifteenth.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.sixteenth.url,
+            title: paintings.sixteenth.title,
+            price: paintings.sixteenth.price,
+            qty: paintings.sixteenth.qty,
+        })
 })
 // LOG IN USERS PRIOR TO TESTING
 before(async () => {
