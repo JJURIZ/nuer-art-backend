@@ -18,7 +18,7 @@ const thirdPainting = {
 }
 const fourthPainting = {
     url: "https://res.cloudinary.com/jjuriz/image/upload/v1611678904/nuerart/CrossSwirlSection_w5tzjl.jpg",
-    title: 'Smile Flower',
+    title: 'Cross Swirl Section',
     price: 60,
     qty: 0
 }
