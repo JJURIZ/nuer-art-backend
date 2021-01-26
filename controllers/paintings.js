@@ -9,7 +9,7 @@ const db = require('../models')
 const router = express.Router()
 
 // GET ROUTE FOR PAINTING/ALL/:ID
-router.get('all/:id', async (req, res) => {
+router.get('/all', async (req, res) => {
     try {
         const allPainting = await db.Painting.find({
             name: req.params.id

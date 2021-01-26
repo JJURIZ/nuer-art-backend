@@ -6,14 +6,17 @@ const expect = require('chai').expect
 const app = require('../server')
 const db = require('../models')
 const users = require('../seeders/users')
+const paintings = require('../seeders/paintings')
 
 // CREATE OBJECT FOR DATA
 let dbUsers = {}
+let dbPaintings = {}
 let tokens = {}
 
 // DELETE DATA BEFORE PROCEEDING
 before(async () => {
     await db.User.deleteMany({})
+    await db.Painting.deleteMany({})
 })
 
 // CREATE TEST USERS
@@ -72,6 +75,45 @@ before(async () => {
         })
 })
 
+// CREATE PAINTINGS
+before(async () => {
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.first.url,
+            title: paintings.first.title,
+            price: paintings.first.price,
+            qty: paintings.first.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.second.url,
+            title: paintings.second.title,
+            price: paintings.second.price,
+            qty: paintings.second.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.third.url,
+            title: paintings.third.title,
+            price: paintings.third.price,
+            qty: paintings.third.qty,
+        })
+    await request(app)
+        .post('/paintings/create')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .send({
+            url: paintings.fourth.url,
+            title: paintings.fourth.title,
+            price: paintings.fourth.price,
+            qty: paintings.fourth.qty,
+        })
+})
 // LOG IN USERS PRIOR TO TESTING
 before(async () => {
     const loggingJill = await request(app)
@@ -145,4 +187,4 @@ describe('SERVER: GET route for /', () => {
     })
 })
 
-module.exports = { dbUsers, tokens }
+module.exports = { dbUsers, dbPaintings, tokens }
